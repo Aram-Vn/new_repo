@@ -1,6 +1,6 @@
 #include <iostream>
 
-int fib(int num);
+int fibonachi(int num);
 int foo(int num);
 
 int main(){
@@ -9,7 +9,7 @@ int main(){
  std::cin >> num;
   
  std::cout << foo(num) << std::endl;
- std::cout << fib(num) << std::endl;
+ std::cout << fibonachi(num) << std::endl;
 
 }
 
@@ -23,7 +23,7 @@ int foo(int num){
 	return res;
 }
 
-int fib(int num){
+int fibonachi(int num){
 	int tmp = 0;
 	int last = 0;
 	int next = 1;
