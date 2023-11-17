@@ -1,5 +1,6 @@
 #include <iostream>
 
+
 int fibonachi2(int num);
 int foo(int num);
 
@@ -9,6 +10,7 @@ int main(){
  std::cin >> num;
   
  std::cout << foo(num) << std::endl;
+
  std::cout << fibonachi2(num) << std::endl;
 
 }
