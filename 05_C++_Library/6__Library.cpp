@@ -2,16 +2,16 @@
 #include <vector>
 #include "3__Library.h"
 
-void Library::add_reader(const std::string& new_name, const int book_ind)
+void Library::addReader(const Reader& reader)
 {
 
-	m_readers.emplace_back(new_name, book_ind );
+	m_readers.push_back(reader);
 
 }
 
-void Library::add_book(const std::string& title, const std::string& author)
+void Library::addBook(const Book& book)
 {
-	m_books.emplace_back(title, author);
+	m_books.push_back(book);
 }
 
 void Library::issue_book(int book_id, int reader_id)
@@ -59,5 +59,19 @@ void Library::issue_book(int book_id, int reader_id)
 		}
 	
 		m_books[book_index].set_availibility(false);
-				
+		m_readers[reader_index].addBook(book_id);	
 }
+
+
+
+/* void Library::add_reader(const std::string& new_name, const int book_ind) */
+/* { */
+
+/* 	m_readers.emplace_back(new_name, book_ind ); */
+
+/* } */
+
+/* void Library::add_book(const std::string& title, const std::string& author) */
+/* { */
+/* 	m_books.emplace_back(title, author); */
+/* } */

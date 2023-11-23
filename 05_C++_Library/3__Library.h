@@ -10,8 +10,13 @@
 class Library
 {
 public:
-	void add_reader(const std::string& new_name, const int book_ind);
-	void add_book(const std::string& title, const std::string& author);
+	void addReader(const Reader& reader);
+	void addBook(const Book& book);
+
+	/* void add_reader(const std::string& new_name, const int book_ind); */
+	/* void add_book(const std::string& title, const std::string& author); */
+
+	
 	void issue_book(int book_id, int reader_id);
 	void return_book(int book_id, int reader_id);
 
