@@ -26,7 +26,7 @@ std::vector<int> Reader::get_issued_Books() const
 	return m_issued_books;
 }
 
-void returnBook(const int id)
+void Reader::returnBook(const int id)
 {
 	if(id < 0){
 		std::cout << "in returnBook(Reader)" << std::endl;
@@ -34,8 +34,21 @@ void returnBook(const int id)
 		return;
 	}
 
-	
+	bool flag = false;
+	int book_index = 0;
 
+		for(int i = 0; i < m_issued_books.size(); ++i){
+			if(m_issued_books[i] == id){
+				flag = true;
+				book_index = i;
+				break;
+			}
+		}
+
+		if(!flag){
+			std::cout << "in (returnBook)" << std::endl;
+			std::cout << "there is no such book_id" << std::endl;
+		}	
+
+		m_issued_books.erase(m_issued_books.begin() + book_index);
 }
-
-
