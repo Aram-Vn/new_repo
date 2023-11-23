@@ -38,7 +38,7 @@ void Library::issue_book(int book_id, int reader_id)
 		if(!flag){
 			std::cout << "in (issue_book)" << std::endl;
 			std::cout << "there is no such book_id" << std::endl;
-		} else if(!(m_books[book_index].is_available()){
+		} else if(!m_books[book_index].is_available()){
 			std::cout << "in (issue_book)" << std::endl;
 			std::cout << "sorry\nthat book is not available" << std::endl;	
 		}	

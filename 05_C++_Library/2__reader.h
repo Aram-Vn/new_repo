@@ -19,6 +19,7 @@ public:
 
 public:
 	void returnBook(const int id);
+	void addBook(const int id);
 
 private:
 	static int id;

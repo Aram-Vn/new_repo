@@ -52,3 +52,10 @@ void Reader::returnBook(const int id)
 
 		m_issued_books.erase(m_issued_books.begin() + book_index);
 }
+
+
+void Reader::addBook(const int id)
+{
+	m_issued_books.push_back(id);
+}
+
