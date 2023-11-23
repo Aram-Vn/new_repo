@@ -18,7 +18,7 @@ public:
 	/* void set_name(std::string new_name); */
 
 public:
-	void returnBook(int id);
+	void returnBook(const int id);
 
 private:
 	static int id;

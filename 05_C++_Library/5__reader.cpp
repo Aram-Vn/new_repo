@@ -26,6 +26,16 @@ std::vector<int> Reader::get_issued_Books() const
 	return m_issued_books;
 }
 
+void returnBook(const int id)
+{
+	if(id < 0){
+		std::cout << "in returnBook(Reader)" << std::endl;
+		std::cout << "id must be >= 0" << std::endl;
+		return;
+	}
 
+	
+
+}
 
 
