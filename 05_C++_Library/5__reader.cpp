@@ -3,6 +3,8 @@
 
 #include "2__reader.h"
 
+int Reader::id = 0;
+
 
 Reader::Reader(std::string name, int book_ind) : 
 	m_id{++id},

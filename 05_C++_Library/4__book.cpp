@@ -1,6 +1,8 @@
 #include <iostream>
 #include "1__book.h"
 
+int Book::id = 0;
+
 Book::Book(std::string title, std::string author) : 
 	m_id{++id},
 	m_title{title},

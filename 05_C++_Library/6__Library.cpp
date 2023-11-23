@@ -2,29 +2,37 @@
 #include <vector>
 #include "3__Library.h"
 
-void Library::addReader(const Reader& reader)
+void Library::add_reader(const std::string& new_name, const int book_ind)
 {
-
-	m_readers.push_back(reader);
-
+	m_readers.emplace_back(new_name, book_ind );
 }
 
-void Library::addBook(const Book& book)
+void Library::add_book(const std::string& title, const std::string& author)
 {
-	m_books.push_back(book);
+	m_books.emplace_back(title, author);
 }
+
+/* void Library::addReader(const Reader& reader) */
+/* { */
+/* 	m_readers.push_back(reader); */
+/* } */
+
+/* void Library::addBook(const Book& book) */
+/* { */
+/* 	m_books.push_back(book); */
+/* } */
 
 void Library::issue_book(int book_id, int reader_id)
 {
 
-	if(book_id < 0 && reader_id < 0){
+	if(book_id <= 0 && reader_id <= 0){
 		std::cout << "in (issue_book)" << std::endl;
 		std::cout << "book_id and reader_id must be >= 0" << std::endl;
 		return;
 	}
 
 	bool flag = false;
-	int book_index = 0;
+	int book_index = 9;
 	int reader_index = 0;
 
 		for(int i = 0; i < m_books.size(); ++i){
@@ -57,6 +65,10 @@ void Library::issue_book(int book_id, int reader_id)
 			std::cout << "in (issue_book)" << std::endl;
 			std::cout << "there is no such reader_id" << std::endl;
 		}
+
+		std::cout << "reader: " <<  m_readers[reader_index].get_name() << std::endl;
+		std::cout << "issued book: " <<  m_books[book_index].get_title() << std::endl;		
+		std::cout << "book author: " << m_books[book_index].get_author() << std::endl;
 	
 		m_books[book_index].set_availibility(false);
 		m_readers[reader_index].addBook(book_id);	
@@ -64,14 +76,4 @@ void Library::issue_book(int book_id, int reader_id)
 
 
 
-/* void Library::add_reader(const std::string& new_name, const int book_ind) */
-/* { */
 
-/* 	m_readers.emplace_back(new_name, book_ind ); */
-
-/* } */
-
-/* void Library::add_book(const std::string& title, const std::string& author) */
-/* { */
-/* 	m_books.emplace_back(title, author); */
-/* } */
