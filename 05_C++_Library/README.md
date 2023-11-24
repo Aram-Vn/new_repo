@@ -3,6 +3,7 @@
 ## Book Management
 
 Class Book has data members like:
+
    -`int book ID`
    
    -`std::string title`
@@ -13,15 +14,19 @@ Class Book has data members like:
 
 ## and member functions like:
 
-   int getId() const;
-   std::string getAuthor() const;
-   std::string getTitle() const;
-   bool getAvailability() const;
-   void setAvailability(bool available);
+   -`int getId() const`
+   
+   -`std::string getAuthor() const`
+   
+   -`std::string getTitle() const`
+   
+   -`bool getAvailability() const`
+   
+   -`void setAvailability (bool available)`
 
 **********************************************
 
-# Reader Management
+## Reader Management
 
 -Class Reader has data members like:
    int reader ID,
