@@ -20,17 +20,17 @@
 
 ## Reader Management
 
--Class Reader has data members like:
-   int reader ID,
-   std::string name,
-   std::vector<int> issued books
+- **Data Members:**
+  - `int readerID`
+  - `std::string name`
+  - `std::vector<int> issuedBooks`
 
--and member functions like:
-   int getId() const;
-   std::string getName() const;
-   std::vector<int> getIssuedBooks() const;
-   void returnBook(int id);
-
+- **Member Functions:**
+- **Member Functions:**
+  - `int getId() const;`
+  - `std::string getName() const;`
+  - `std::vector<int> getIssuedBooks() const;`
+  - `void returnBook(int id);`
 ***************************************
 
 #Library Management
