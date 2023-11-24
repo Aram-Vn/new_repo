@@ -40,7 +40,7 @@ void Reader::returnBook(const int id)
 	int book_index = 0;
 
 		for(int i = 0; i < m_issued_books.size(); ++i){
-			if(m_issued_books[i] == id){
+			if(m_issued_books[i]== id){
 				flag = true;
 				book_index = i;
 				break;
@@ -48,7 +48,7 @@ void Reader::returnBook(const int id)
 		}
 
 		if(!flag){
-			std::cout << "in (returnBook)" << std::endl;
+			std::cout << "in (returnBook)(reader)" << std::endl;
 			std::cout << "there is no such book_id" << std::endl;
 		}	
 

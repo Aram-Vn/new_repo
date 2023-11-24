@@ -23,6 +23,10 @@ public:
 	Book get_book(int index) const;
 	Reader get_reader(int index) const;
 
+public:
+	void helper(int book_id, int reader_id, int& book_index, int& reader_index); 
+
+
 private:
 	std::vector<Book> m_books;
 	std::vector<Reader> m_readers;
