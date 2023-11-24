@@ -1,14 +1,14 @@
-## Library Management system
+# Library Management system
 ******************************************************
-# Book Management
+## Book Management
 
 Class Book has data members like:
-   -`int book ID,`
-   -`std::string title,`
-   -`std::string author,`
-   -`bool status (available or issued).`
+   -`int book ID`
+   -`std::string title`
+   -`std::string author`
+   -`bool status (available or issued)`
 
-### and member functions like:
+## and member functions like:
 
    int getId() const;
    std::string getAuthor() const;
