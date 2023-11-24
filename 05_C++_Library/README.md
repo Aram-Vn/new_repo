@@ -4,13 +4,10 @@
 
 - **Data Members:**
 
-   -`int book ID`
-   
-   -`std::string title`
-   
-   -`std::string author`
-   
-   -`bool status (available or issued)`
+  - `int bookID`
+  - `std::string title`
+  - `std::string author`
+  - `bool status` (available or issued)
 
 ## and member functions like:
 
