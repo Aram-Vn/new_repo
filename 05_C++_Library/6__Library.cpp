@@ -14,7 +14,7 @@ void Library::add_book(const std::string& title, const std::string& author)
 	m_books.emplace_back(title, author);
 }
 
-void Library::helper(int book_id, int reader_id, int& book_index, int& reader_index)
+void Library::issue_book(int book_id, int reader_id)
 {
 	if(book_id <= 0 && reader_id <= 0){
 		std::cout << "in (issue_book)(6__Library.cpp)" << std::endl;
@@ -56,7 +56,6 @@ void Library::helper(int book_id, int reader_id, int& book_index, int& reader_in
 		}
 }
 
-void Library::issue_book(int book_id, int reader_id)
 {
 	int book_index = -1;
 	int reader_index = -1 ;
@@ -74,18 +73,49 @@ void Library::issue_book(int book_id, int reader_id)
 	m_readers[reader_index].addBook(book_id);	
 }
 
-
 void Library::return_book(int book_id, int reader_id)
 {
 
+		if(book_id <= 0 && reader_id <= 0){
+			std::cout << "in (issue_book)(6__Library.cpp)" << std::endl;
+			std::cout << "book_id and reader_id must be >= 0" << std::endl;
+			return;
+		}
+
 	int book_index = -1;
 	int reader_index = -1 ;
-	helper(book_id, reader_id, book_index, reader_index);
+	bool flag = false;
 
-	if(reader_index == -1 || book_index == -1){
-		std::cout << "in return_book" << std::endl;
-		return;
-	}
+		for(int i = 0; i < m_books.size(); ++i){
+			if(m_books[i].get_id() == book_id){
+				flag = true;
+				book_index = i;
+				break;
+			}
+		}
+
+		if(!flag){
+			std::cout << "in(return_book)(6__Library.cpp)" << std::endl;
+			std::cout << "there is no such book_id" << std::endl;
+			return;
+		}	
+
+		flag = false;		
+
+		for(int i = 0; i < m_readers.size(); ++i){
+			if(m_readers[i].get_id() == reader_id){
+				flag = true;
+				reader_index = i;
+				break;
+			}
+		}
+
+		if(!flag){
+			std::cout << "in(return_book)(6__Library.cpp)" << std::endl;
+			std::cout << "there is no such reader_id" << std::endl;
+			return;
+		}
+
 
 	std::cout << "reader: " <<  m_readers[reader_index].get_name() << std::endl;
 	std::cout << "returned book: " <<  m_books[book_index].get_title() << std::endl;		
@@ -93,5 +123,6 @@ void Library::return_book(int book_id, int reader_id)
 
 	m_books[book_index].set_availibility(true);
 	m_readers[reader_index].returnBook(m_books[book_index].get_id());	 
-}
 
+
+}
