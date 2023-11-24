@@ -4,8 +4,11 @@
 
 Class Book has data members like:
    -`int book ID`
+   
    -`std::string title`
+   
    -`std::string author`
+   
    -`bool status (available or issued)`
 
 ## and member functions like:
