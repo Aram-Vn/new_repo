@@ -2,7 +2,7 @@
 ******************************************************
 ## Book Management
 
-Class Book has data members like:
+- **Data Members:**
 
    -`int book ID`
    
