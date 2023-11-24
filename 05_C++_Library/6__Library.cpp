@@ -16,11 +16,14 @@ void Library::add_book(const std::string& title, const std::string& author)
 
 void Library::issue_book(int book_id, int reader_id)
 {
-	if(book_id <= 0 && reader_id <= 0){
-		std::cout << "in (issue_book)(6__Library.cpp)" << std::endl;
-		std::cout << "book_id and reader_id must be >= 0" << std::endl;
-		return;
-	}
+	int book_index = -1;
+	int reader_index = -1 ;
+	
+		if(book_id <= 0 && reader_id <= 0){
+			std::cout << "in (issue_book)(6__Library.cpp)" << std::endl;
+			std::cout << "book_id and reader_id must be >= 0" << std::endl;
+			return;
+		}
 
 	bool flag = false;
 
@@ -33,14 +36,16 @@ void Library::issue_book(int book_id, int reader_id)
 		}
 
 		if(!flag){
-			std::cout << "in(6__Library.cpp)" << std::endl;
+			std::cout << "in(issue_book)(6__Library.cpp)" << std::endl;
 			std::cout << "there is no such book_id" << std::endl;
+			return;
 		} else if(!m_books[book_index].is_available()){
-			std::cout << "in(6__Library.cpp)" << std::endl;
+			std::cout << "in(issue_book)(6__Library.cpp)" << std::endl;
 			std::cout << "sorry that book is not available" << std::endl;	
+			return;
 		}	
 
-		flag = false;		
+	flag = false;		
 
 		for(int i = 0; i < m_readers.size(); ++i){
 			if(m_readers[i].get_id() == reader_id){
@@ -51,19 +56,10 @@ void Library::issue_book(int book_id, int reader_id)
 		}
 
 		if(!flag){
-			std::cout << "in(6__Library.cpp)" << std::endl;
+			std::cout << "in(issue_book)(6__Library.cpp)" << std::endl;
 			std::cout << "there is no such reader_id" << std::endl;
+			return;
 		}
-}
-
-{
-	int book_index = -1;
-	int reader_index = -1 ;
-	helper(book_id, reader_id, book_index, reader_index);
-
-	if(reader_index == -1 || book_index == -1){
-		return;
-	}
 
 	std::cout << "reader: " <<  m_readers[reader_index].get_name() << std::endl;
 	std::cout << "issued book: " <<  m_books[book_index].get_title() << std::endl;		
