@@ -9,17 +9,12 @@
   - `std::string author`
   - `bool status` (available or issued)
 
-## and member functions like:
-
-   -`int getId() const`
-   
-   -`std::string getAuthor() const`
-   
-   -`std::string getTitle() const`
-   
-   -`bool getAvailability() const`
-   
-   -`void setAvailability (bool available)`
+- **Member Functions:**
+  - `int getId() const;`
+  - `std::string getAuthor() const;`
+  - `std::string getTitle() const;`
+  - `bool getAvailability() const;`
+  - `void setAvailability(bool available);`
 
 **********************************************
 
