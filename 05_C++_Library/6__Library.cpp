@@ -71,7 +71,6 @@ void Library::issue_book(int book_id, int reader_id)
 
 void Library::return_book(int book_id, int reader_id)
 {
-
 		if(book_id <= 0 && reader_id <= 0){
 			std::cout << "in (issue_book)(6__Library.cpp)" << std::endl;
 			std::cout << "book_id and reader_id must be >= 0" << std::endl;
@@ -119,6 +118,9 @@ void Library::return_book(int book_id, int reader_id)
 
 	m_books[book_index].set_availibility(true);
 	m_readers[reader_index].returnBook(m_books[book_index].get_id());	 
-
-
 }
+
+/* Book get_book(int index) const */
+/* { */
+
+/* } */
