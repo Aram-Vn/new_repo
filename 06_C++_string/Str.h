@@ -8,6 +8,8 @@ public:
 	Str(const char* new_str);
 
 private:
+	bool m_Is_on_stack;
+
     struct dyn_str 
     { 
         int m_size; 
