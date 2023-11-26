@@ -1,23 +1,21 @@
 Իրականացնել դինամիկ տող (string), որը կիրականացվի վեկտորի նման՝ ունենալով size/capacity, ներքին ցուցիչ char-երի վրա, բայց անհրաժեշտ է օպտիմիզացնել փոքր տողերի համար։ Եթե տողի չափը չի գերազանցում 16 սիմվոլը, ապա տողը պետք է պահվի ստեկում, հակառակ դեպքում՝ heap-ում։ Խնդրի լուծման համար կարող եք օգտագործել union, որը կկիրառվի մոտավորապես այսպես.
 
-`class my_string`
-
-`{` 
-
-`...` 
-
-`private:`
-
+```cpp
+class my_string 
+{ 
+    // ...
+private: 
     struct dyn_str 
     { 
-        int size; char* ptr;
+        int size; 
+        char* ptr;
     }; 
     union { 
         char onstack[16]; 
         dyn_str str; 
     } string;
     bool isOnHeap;
-};`
+};```
 
 Անհրաժեշտ է իրականացնել հետևյալ անդամ ֆունկցիաները.
 default constructor
