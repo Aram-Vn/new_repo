@@ -36,9 +36,7 @@ private:
 - operator+=: `string& operator+=(const string& s)`;, 
             `string& operator+=(const char* s)`;
 
-- operator+: `string operator+(const string& s1, const string& s2)`;,             
--   `string operator+(const string& s1, const char* s2)`;,            
--   `string operator+(const char* s1, const string& s2)`;
+- operator+: `string operator+(const string& s1, const string& s2)`;,   `string operator+(const string& s1, const char* s2)`;,  `string operator+(const char* s1, const string& s2)`;
 
 - operator<<: `std::ostream& operator<<(std::ostream& cout, string& str)`;
 
