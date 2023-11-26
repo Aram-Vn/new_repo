@@ -19,9 +19,9 @@ private:
 ```
 ##functions
 
-default constructor
+- default constructor
 
-constructor with parameters
+- constructor with parameters
 
 copy constructor
 
