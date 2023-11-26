@@ -151,9 +151,29 @@ Str& Str::operator+=(const char* new_str)
 {
 	if(m_Is_on_stack){
 		if(strlen(string.on_stack) + strlen(new_str) < 16){
-			
+			strcat(string.on_stack, new_str);			
+		} else {
+			char tmp_str[16];
+			strcpy(tmp_str, string.on_stack);
+
+			string.str.m_ptr = new char[strlen(string.on_stack) + strlen(new_str) + 1];
+
+			strcpy(string.str.m_ptr, tmp_str);
+            strcat(string.str.m_ptr, new_str);
+
+			m_Is_on_stack = false;		
 		}
+	} else {
+		string.str.m_size += strlen(new_str) + 1;
+	
+		char* tmp_ptr = new char[string.str.m_size];
+		strcat(tmp_ptr, new_str);
+
+		delete[] string.str.m_ptr;
+		string.str.m_ptr = tmp_ptr;
 	}
+
+	return *this;
 }
 
 void Str::print()
