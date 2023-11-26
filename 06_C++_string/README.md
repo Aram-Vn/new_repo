@@ -23,30 +23,29 @@ private:
 
 - constructor with parameters
 
-copy constructor
+- copy constructor
 
-move constructor
+- move constructor
 
-destructor
+- destructor
 
-copy assignment operator: `string& operator=(string& rhs)`;
+- copy assignment operator: `string& operator=(string& rhs)`;
 
-move assignment operator: `string& operator=(string&& rhs) noexcept`;
+- move assignment operator: `string& operator=(string&& rhs) noexcept`;
 
-operator+=: `string& operator+=(const string& s)`;, 
+- operator+=: `string& operator+=(const string& s)`;, 
             `string& operator+=(const char* s)`;
 
-operator+: `string operator+(const string& s1, const string& s2)`;, 
+- operator+: `string operator+(const string& s1, const string& s2)`;, 
             
-operator+:  `string operator+(const string& s1, const char* s2)`;, 
+- operator+:  `string operator+(const string& s1, const char* s2)`;, 
             
-operator+:   `string operator+(const char* s1, const string& s2)`;
+- operator+:   `string operator+(const char* s1, const string& s2)`;
 
+- operator<<: `std::ostream& operator<<(std::ostream& cout, string& str)`;
 
-operator<<: `std::ostream& operator<<(std::ostream& cout, string& str)`;
+- operator>>: `std::istream& operator>>(std::istream& cin, string& str)`;
 
-operator>>: `std::istream& operator>>(std::istream& cin, string& str)`;
+- `size()`
 
-`size()`
-
-`c_str()`
+- `c_str()`
