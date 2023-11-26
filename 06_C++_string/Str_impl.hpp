@@ -176,6 +176,11 @@ Str& Str::operator+=(const char* new_str)
 	return *this;
 }
 
+Str operator+(const Str& s1, const Str& s2)
+{
+	
+}
+
 void Str::print()
 {
 	if(m_Is_on_stack){
