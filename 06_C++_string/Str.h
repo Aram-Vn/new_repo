@@ -5,7 +5,21 @@ class Str
 { 
 public:
 	Str();
+	~Str();
 	Str(const char* new_str);
+
+	Str(const Str& other);	
+	Str(Str&& other) noexcept;
+
+	Str& operator=(const Str& other);
+	Str& operator=(Str&& other) noexcept;
+	Str& operator+=(const Str& other);
+	Str& operator+=(const char* new_str);
+
+	int size() const;
+
+public:
+	void print();
 
 private:
 	bool m_Is_on_stack;
@@ -15,12 +29,11 @@ private:
         int m_size; 
 		char* m_ptr;
     };
- 
-    union { 
+
+    union { //std::variant 
         char on_stack[16]; 
         dyn_str str; 
     } string; 
 };
-
 
 #endif // Str.h

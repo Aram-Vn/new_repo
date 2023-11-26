@@ -9,7 +9,7 @@ function endsWithCpp {
 function compileWithGpp {
     file="main.cpp"
     echo "Compiling $file with g++..."
-    g++ "$file" -o "${file%.cpp}.out"
+    g++ -Wall "$file" -o "${file%.cpp}.out"
 }
 
 # Monitor the current directory for file changes
