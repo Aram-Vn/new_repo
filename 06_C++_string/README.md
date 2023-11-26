@@ -15,9 +15,8 @@ private:
         dyn_str str; 
     } string;
     bool isOnHeap;
-};```
+};
 
-Անհրաժեշտ է իրականացնել հետևյալ անդամ ֆունկցիաները.
 default constructor
 constructor with parameters
 copy constructor
