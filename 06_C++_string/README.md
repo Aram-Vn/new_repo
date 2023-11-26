@@ -17,15 +17,18 @@ private:
     bool isOnHeap;
 };
 ```
-default constructor
+## default constructor
+
 constructor with parameters
 copy constructor
 move constructor
 destructor
-copy assignment operator`  string& operator=(string& rhs);
-move assignment operator` string& operator=(string&& rhs) noexcept;
-operator+=` string& operator+=(const string& s);
-                             string& operator+=(const char* s);
+
+copy assignment operator  `string& operator=(string& rhs)`;
+
+move assignment operator `string& operator=(string&& rhs) noexcept`
+operator+=                ՝string& operator+=(const string& s)՝
+                          ՝string& operator+=(const char* s)՝
 operator+`    string operator+(const string& s1, const string& s2);
                              string operator+(const string& s1, const char* s2);
                              string operator+(const char* s1, const string& s2);
