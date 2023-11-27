@@ -4,24 +4,25 @@
 
 int main(){
 
- Str s("aaaa  aaa a");
+ Str s("aa  aaa a");
  s.print();
 
- Str s1("aaa ggg qwertyu qwerty uqwer tyuwer we rty");
-// s1.print();
-
- Str s2("b b vvvvvvvvv");
-
- s += s1;
-// s.print();
-
- const char* str = "AAAAAA 1";
+ Str s1("qwerertyutqwertqwertwertertyer we rty");
+ s1.print();
  
- Str s4(s1.c_str());
- s4.print();
+ std::cout << "\n*******" << std::endl;
 
- s2 += str;
- s2.print();
+ Str a;
 
+ a = s1 + s;	
+ a.print(); 
+ 
+ std::cout << "\n*******" << std::endl;
+ 
+ Str a1;
+
+ a1 = s + s1;	
+ a1.print(); 
+ 
 
 }

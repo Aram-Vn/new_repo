@@ -70,9 +70,9 @@ Str& Str::operator=(const Str& other)
 
 			this->string.str.m_size = other.string.str.m_size;
 
-			for(int i = 0; i < other.string.str.m_size; ++i){
-				this->string.str.m_ptr[i] = other.string.str.m_ptr[i];
-			}
+			strcpy(this->string.str.m_ptr, other.string.str.m_ptr);	
+	
+			this->m_Is_on_stack = false;
 		}	
 	} 
 
@@ -88,7 +88,8 @@ Str& Str::operator=(Str&& other) noexcept
 		} else {
 			this->string.str.m_ptr = other.string.str.m_ptr;
 			this->string.str.m_size = other.string.str.m_size;
-
+			this->m_Is_on_stack = false;
+			
 			other.string.str.m_ptr = nullptr;
 			other.string.str.m_size = 0;
 		}
@@ -203,14 +204,33 @@ Str Str::operator+(const Str& other)
 				if(other.m_Is_on_stack){
 					strcpy(tmp_obj.string.str.m_ptr, other.string.on_stack);
 				} else {
-					strcpy(tmp_obj.string.str.m_ptr, string.str.m_ptr);
+					strcpy(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
 				}		
 
 			m_Is_on_stack = false;	
 		}
 	} else {
 
+		tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 1;
+
+		tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
+
+		/* tmp_obj.string.str.m_size += other.size() + 2; */
+		/* char* tmp_ptr = new char[tmp_obj.string.str.m_size]; */
+
+		strcpy(tmp_obj.string.str.m_ptr, this->string.str.m_ptr);
+
+				if(other.m_Is_on_stack){
+					strcat(tmp_obj.string.str.m_ptr, other.string.on_stack);
+				} else {
+					strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
+				}		
+
+		/* delete[] other.string.str.m_ptr; */
+		/* tmp_obj.string.str.m_ptr = tmp_ptr; */
 	}
+
+	return tmp_obj;
 			
 }
 
