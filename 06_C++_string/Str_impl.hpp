@@ -176,9 +176,10 @@ Str& Str::operator+=(const char* new_str)
 	return *this;
 }
 
-Str operator+(const Str& s1, const Str& s2)
+Str Str::operator+(const Str& other)
 {
-	
+	Str tmp_obj;
+		
 }
 
 void Str::print()

@@ -17,7 +17,7 @@ public:
 	Str& operator+=(const Str& other);
 	Str& operator+=(const char* new_str);
 
-	friend Str operator+(const Str& s1, const Str& s2);
+	Str operator+(const Str& other);
 
 	int size() const;
 	const char* c_str();
@@ -40,6 +40,5 @@ private:
     } string; 
 };
 
-Str operator+(const Str& s1, const Str& s2); 
 
 #endif // Str.h
