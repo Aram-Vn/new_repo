@@ -20,7 +20,7 @@ public:
 	Str operator+(const Str& other);
 
 	int size() const;
-	const char* c_str();
+	const char* c_str() const;
 
 public:
 	void print();

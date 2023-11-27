@@ -17,6 +17,7 @@ Str::Str(const char* new_str)
 	if(len < 16){
 		strcpy(string.on_stack, new_str);
 		m_Is_on_stack = true;
+		
 	} else {
 		string.str.m_ptr = new char[len + 1];
 		string.str.m_size = len;
@@ -152,22 +153,29 @@ Str& Str::operator+=(const char* new_str)
 	if(m_Is_on_stack){
 		if(strlen(string.on_stack) + strlen(new_str) < 16){
 			strcat(string.on_stack, new_str);			
+			string.on_stack[15] = '\0';
 		} else {
 			char tmp_str[16];
 			strcpy(tmp_str, string.on_stack);
+			
+			string.str.m_size = strlen(string.on_stack) + strlen(new_str) + 2;
 
-			string.str.m_ptr = new char[strlen(string.on_stack) + strlen(new_str) + 1];
+			string.str.m_ptr = new char[string.str.m_size];
 
 			strcpy(string.str.m_ptr, tmp_str);
             strcat(string.str.m_ptr, new_str);
+	
+			/* string.str.m_ptr[string.str.m_size - 1] = '\0'; */	
 
 			m_Is_on_stack = false;		
 		}
 	} else {
-		string.str.m_size += strlen(new_str) + 1;
+		string.str.m_size += strlen(new_str) + 2;
 	
 		char* tmp_ptr = new char[string.str.m_size];
-		strcat(tmp_ptr, new_str);
+
+		strcpy(tmp_ptr, string.str.m_ptr);
+        strcat(tmp_ptr, new_str);
 
 		delete[] string.str.m_ptr;
 		string.str.m_ptr = tmp_ptr;
@@ -178,8 +186,41 @@ Str& Str::operator+=(const char* new_str)
 
 Str Str::operator+(const Str& other)
 {
-	Str tmp_obj;
-		
+	Str tmp_obj(this->c_str());
+	
+	if(tmp_obj.m_Is_on_stack){
+		if(tmp_obj.size() + other.size() < 16){
+			strcat(tmp_obj.string.on_stack, other.string.on_stack);
+		} else {
+			char tmp_str[16];
+			strcpy(tmp_str, tmp_obj.string.on_stack);
+			
+			tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 2;
+			tmp_obj.string.str.m_ptr = new char[tmp_obj.string.str.m_size];
+
+			strcpy(tmp_obj.string.str.m_ptr, tmp_str);
+           
+				if(other.m_Is_on_stack){
+					strcpy(tmp_obj.string.str.m_ptr, other.string.on_stack);
+				} else {
+					strcpy(tmp_obj.string.str.m_ptr, string.str.m_ptr);
+				}		
+
+			m_Is_on_stack = false;	
+		}
+	} else {
+
+	}
+			
+}
+
+const char* Str::c_str() const
+{
+	if(m_Is_on_stack){
+		return string.on_stack;
+	} else {
+		return string.str.m_ptr;
+	}
 }
 
 void Str::print()
