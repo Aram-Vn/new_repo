@@ -34,6 +34,7 @@ Str::Str(const Str& other)
 	} else {
 		this->string.str.m_ptr = new char[other.string.str.m_size];		
 		strcpy(this->string.str.m_ptr, other.string.str.m_ptr);
+
 		this->m_Is_on_stack = false; 
 	}
 }
@@ -67,14 +68,14 @@ Str& Str::operator=(const Str& other)
 {
 	if(this != &other){
 
+		if(!this->m_Is_on_stack){
+			delete[] this->string.str.m_ptr;
+		}
+
 		if(other.m_Is_on_stack){
 			strcpy(this->string.on_stack, other.string.on_stack);
 			this->m_Is_on_stack = other.m_Is_on_stack;
 		} else {
-
-			if(this->string.str.m_ptr != nullptr){
-				delete[] this->string.str.m_ptr;
-			}
 
 			this->string.str.m_size = other.string.str.m_size;
  			this->string.str.m_ptr = new char[ this->string.str.m_size];
