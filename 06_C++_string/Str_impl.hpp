@@ -30,9 +30,11 @@ Str::Str(const Str& other)
 {
 	if(other.m_Is_on_stack){
 		strcpy(this->string.on_stack, other.string.on_stack);
+		this->m_Is_on_stack = true;
 	} else {
 		this->string.str.m_ptr = new char[other.string.str.m_size];		
 		strcpy(this->string.str.m_ptr, other.string.str.m_ptr);
+		this->m_Is_on_stack = false; 
 	}
 }
 
@@ -40,10 +42,14 @@ Str::Str(Str&& other) noexcept
 {
 	if(other.m_Is_on_stack){
 		strcpy(this->string.on_stack, other.string.on_stack);
+		this->m_Is_on_stack = true;
 	} else {
-		for(int i = 0; i < other.string.str.m_size; ++i){
-			this->string.str.m_ptr[i] = other.string.str.m_ptr[i];
-		}
+		this->string.str.m_ptr = other.string.str.m_ptr;
+		this->string.str.m_size = other.string.str.m_size;
+		this->m_Is_on_stack = false;
+		
+		other.string.str.m_ptr = nullptr;
+		other.string.str.m_size = 0;
 	}
 }
 
