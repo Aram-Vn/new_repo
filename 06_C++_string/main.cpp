@@ -5,24 +5,31 @@
 int main(){
 
  Str s("aa  aaa a");
- s.print();
+ /* s.print(); */
 
  Str s1("qwerertyutqwertqwertwertertyer we rty");
- s1.print();
- 
- std::cout << "\n*******" << std::endl;
+ /* s1.print(); */
 
- Str a;
+ Str f1 = s;
+ f1.print(); // Segmentation fault (core dumped) 
 
- a = s1 + s;	
- a.print(); 
- 
- std::cout << "\n*******" << std::endl;
- 
- Str a1;
+ /* Str f2 = s1; */
+ /* f2.print(); */
 
- a1 = s + s1;	
- a1.print(); 
+ 
+ /* std::cout << "\n*******" << std::endl; */
+
+ /* Str a; */
+
+ /* a = s1 + s; */	
+ /* a.print(); */ 
+ 
+ /* std::cout << "\n*******" << std::endl; */
+ 
+ /* Str a1; */
+
+ /* a1 = s + s1; */	
+ /* a1.print(); */ 
  
 
 }

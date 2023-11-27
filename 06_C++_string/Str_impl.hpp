@@ -60,19 +60,22 @@ Str::~Str()
 Str& Str::operator=(const Str& other)
 {
 	if(this != &other){
+
 		if(other.m_Is_on_stack){
 			strcpy(this->string.on_stack, other.string.on_stack);
+			this->m_Is_on_stack = other.m_Is_on_stack;
 		} else {
-			if(other.string.str.m_size > this->string.str.m_size){
+
+			if(this->string.str.m_ptr != nullptr){
 				delete[] this->string.str.m_ptr;
-				this->string.str.m_ptr = new char[other.string.str.m_size];
 			}
 
 			this->string.str.m_size = other.string.str.m_size;
-
+ 			this->string.str.m_ptr = new char[ this->string.str.m_size];
+	
 			strcpy(this->string.str.m_ptr, other.string.str.m_ptr);	
 	
-			this->m_Is_on_stack = false;
+			this->m_Is_on_stack = other.m_Is_on_stack;
 		}	
 	} 
 
@@ -84,11 +87,12 @@ Str& Str::operator=(Str&& other) noexcept
 	if(this != &other){
 		if(other.m_Is_on_stack){
 			strcpy(this->string.on_stack, other.string.on_stack);
+			this->m_Is_on_stack = other.m_Is_on_stack;
 			other.string.on_stack[0] = '\0';
 		} else {
 			this->string.str.m_ptr = other.string.str.m_ptr;
 			this->string.str.m_size = other.string.str.m_size;
-			this->m_Is_on_stack = false;
+			this->m_Is_on_stack = other.m_Is_on_stack;
 			
 			other.string.str.m_ptr = nullptr;
 			other.string.str.m_size = 0;
@@ -212,11 +216,7 @@ Str Str::operator+(const Str& other)
 	} else {
 
 		tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 1;
-
 		tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
-
-		/* tmp_obj.string.str.m_size += other.size() + 2; */
-		/* char* tmp_ptr = new char[tmp_obj.string.str.m_size]; */
 
 		strcpy(tmp_obj.string.str.m_ptr, this->string.str.m_ptr);
 
@@ -225,9 +225,6 @@ Str Str::operator+(const Str& other)
 				} else {
 					strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
 				}		
-
-		/* delete[] other.string.str.m_ptr; */
-		/* tmp_obj.string.str.m_ptr = tmp_ptr; */
 	}
 
 	return tmp_obj;
