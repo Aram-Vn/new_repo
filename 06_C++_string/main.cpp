@@ -5,10 +5,10 @@
 int main(){
 
  Str s("aa  aaa a");
- /* s.print(); */
+ s.print();
 
  Str s1("qwerertyutqwertqwertwertertyer we rty");
- /* s1.print(); */
+ s1.print();
 
  Str f1 = s;
  f1.print();   // works!!!!!  

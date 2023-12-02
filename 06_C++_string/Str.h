@@ -1,6 +1,8 @@
 #ifndef STR_H
 #define STR_H
 
+enum {STACK_SIZE = 16};
+
 class Str 
 { 
 public:

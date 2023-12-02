@@ -1,7 +1,7 @@
 #include <iostream>
-#include "4__book.cpp"
-#include "5__reader.cpp"
-#include "6__Library.cpp"
+/* #include "1__book.h" */
+/* #include "5__reader." */
+#include "3__Library.h"
 int main(){
 
  Library lib;

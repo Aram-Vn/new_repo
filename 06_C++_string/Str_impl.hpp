@@ -4,6 +4,7 @@
 #include "Str.h"
 #include <cstring>
 
+
 Str::Str()
 {
 	m_Is_on_stack = true;
@@ -14,7 +15,7 @@ Str::Str(const char* new_str)
 {
 	int len = strlen(new_str);
 
-	if(len < 16){
+	if(len < STACK_SIZE){
 		strcpy(string.on_stack, new_str);
 		m_Is_on_stack = true;
 		
@@ -32,6 +33,8 @@ Str::Str(const Str& other)
 		strcpy(this->string.on_stack, other.string.on_stack);
 		this->m_Is_on_stack = true;
 	} else {
+
+		this->string.str.m_size = other.string.str.m_size;
 		this->string.str.m_ptr = new char[other.string.str.m_size];		
 		strcpy(this->string.str.m_ptr, other.string.str.m_ptr);
 
@@ -121,10 +124,10 @@ int Str::size() const
 Str& Str::operator+=(const Str& other)
 {
 	if(this->m_Is_on_stack){
-		if( (this->size() + other.size()) < 16){
+		if( (this->size() + other.size()) < STACK_SIZE){
 			strcat(this->string.on_stack, other.string.on_stack);			
 		} else {
-			char arr[16];
+			char arr[STACK_SIZE];
 			strcpy(arr, this->string.on_stack);
 
 			this->string.str.m_ptr = new char[this->size() + other.size() + 1];
@@ -163,11 +166,11 @@ Str& Str::operator+=(const Str& other)
 Str& Str::operator+=(const char* new_str)
 {
 	if(m_Is_on_stack){
-		if(strlen(string.on_stack) + strlen(new_str) < 16){
+		if(strlen(string.on_stack) + strlen(new_str) < STACK_SIZE){
 			strcat(string.on_stack, new_str);			
 			string.on_stack[15] = '\0';
 		} else {
-			char tmp_str[16];
+			char tmp_str[STACK_SIZE];
 			strcpy(tmp_str, string.on_stack);
 			
 			string.str.m_size = strlen(string.on_stack) + strlen(new_str) + 2;
@@ -196,47 +199,47 @@ Str& Str::operator+=(const char* new_str)
 	return *this;
 }
 
-Str Str::operator+(const Str& other)
-{
-	Str tmp_obj(this->c_str());
+/* Str Str::operator+(const Str& other) */
+/* { */
+/* 	Str tmp_obj(this->c_str()); */
 	
-	if(tmp_obj.m_Is_on_stack){
-		if(tmp_obj.size() + other.size() < 16){
-			strcat(tmp_obj.string.on_stack, other.string.on_stack);
-		} else {
-			char tmp_str[16];
-			strcpy(tmp_str, tmp_obj.string.on_stack);
+/* 	if(tmp_obj.m_Is_on_stack){ */
+/* 		if(tmp_obj.size() + other.size() < STACK_SIZE){ */
+/* 			strcat(tmp_obj.string.on_stack, other.string.on_stack); */
+/* 		} else { */
+/* 			char tmp_str[strlen(tmp_obj.string.on_stack)]; */
+/* 			strcpy(tmp_str, tmp_obj.string.on_stack); */
 			
-			tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 2;
-			tmp_obj.string.str.m_ptr = new char[tmp_obj.string.str.m_size];
+/* 			tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 2; */
+/* 			tmp_obj.string.str.m_ptr = new char[tmp_obj.string.str.m_size]; */
 
-			strcpy(tmp_obj.string.str.m_ptr, tmp_str);
+/* 			strcpy(tmp_obj.string.str.m_ptr, tmp_str); */
            
-				if(other.m_Is_on_stack){
-					strcpy(tmp_obj.string.str.m_ptr, other.string.on_stack);
-				} else {
-					strcpy(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
-				}		
+/* 				if(other.m_Is_on_stack){ */
+/* 					strcat(tmp_obj.string.str.m_ptr, other.string.on_stack); */
+/* 				} else { */
+/* 					strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr); */
+/* 				} */		
 
-			m_Is_on_stack = false;	
-		}
-	} else {
+/* 			m_Is_on_stack = false; */	
+/* 		} */
+/* 	} else { */
 
-		tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 1;
-		tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
+/* 		tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 1; */
+/* 		tmp_obj.string.str.m_ptr = new char[tmp_obj.size()]; */
 
-		strcpy(tmp_obj.string.str.m_ptr, this->string.str.m_ptr);
+/* 		strcpy(tmp_obj.string.str.m_ptr, this->string.str.m_ptr); */
 
-				if(other.m_Is_on_stack){
-					strcat(tmp_obj.string.str.m_ptr, other.string.on_stack);
-				} else {
-					strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
-				}		
-	}
+/* 				if(other.m_Is_on_stack){ */
+/* 					strcat(tmp_obj.string.str.m_ptr, other.string.on_stack); */
+/* 				} else { */
+/* 					strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr); */
+/* 				} */		
+/* 	} */
 
-	return tmp_obj;
+/* 	return tmp_obj; */
 			
-}
+/* } */
 
 const char* Str::c_str() const
 {
@@ -257,6 +260,45 @@ void Str::print()
 		}
 		std::cout << std::endl;
 	}
+}
+
+Str Str::operator+(const Str& other) {
+    Str tmp_obj(this->c_str());
+    if (tmp_obj.m_Is_on_stack) {
+        if (tmp_obj.size() + other.size() < STACK_SIZE) {
+            strcat(tmp_obj.string.on_stack, other.string.on_stack);
+        } else {
+
+            char tmp_str[STACK_SIZE];
+            strcpy(tmp_str, tmp_obj.string.on_stack);
+
+            tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 1;
+            tmp_obj.string.str.m_ptr = new char[tmp_obj.string.str.m_size];
+
+            strcpy(tmp_obj.string.str.m_ptr, tmp_str);
+
+           		if (other.m_Is_on_stack) {
+            	    strcat(tmp_obj.string.str.m_ptr, other.string.on_stack);
+        	    } else {
+    	            strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
+	            }
+
+            tmp_obj.m_Is_on_stack = false;
+        }
+    } else {
+
+        tmp_obj.string.str.m_size = tmp_obj.size() + other.size() + 1;
+        tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
+
+        strcpy(tmp_obj.string.str.m_ptr, this->string.str.m_ptr);
+
+	        if (other.m_Is_on_stack) {
+    	        strcat(tmp_obj.string.str.m_ptr, other.string.on_stack);
+       		} else {
+            	strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
+        	}
+    }
+    return tmp_obj;
 }
 
 #endif // Str_impl.h
