@@ -20,6 +20,7 @@ public:
 	Str& operator+=(const char* new_str);
 
 	Str operator+(const Str& other);
+	Str operator+(const char* new_str);
 
 	int size() const;
 	const char* c_str() const;

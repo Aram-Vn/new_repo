@@ -298,7 +298,41 @@ Str Str::operator+(const Str& other) {
             	strcat(tmp_obj.string.str.m_ptr, other.string.str.m_ptr);
         	}
     }
+
     return tmp_obj;
 }
+
+Str Str::operator+(const char* new_str)
+{
+	Str tmp_obj(this->c_str());
+
+	if(tmp_obj.m_Is_on_stack) {
+		if (tmp_obj.size() + strlen(new_str) < STACK_SIZE) { 
+			strcat(tmp_obj.string.on_stack, new_str);
+		} else {
+			char tmp_str[STACK_SIZE];
+			strcpy(tmp_str, tmp_obj.string.on_stack);
+
+			tmp_obj.string.str.m_size = tmp_obj.size() + strlen(new_str) + 1;
+			tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
+
+			strcpy(tmp_obj.string.str.m_ptr, tmp_str);
+			strcat(tmp_obj.string.str.m_ptr, new_str);
+
+			tmp_obj.m_Is_on_stack = false; 
+		}
+	} else {
+		
+		tmp_obj.string.str.m_size = tmp_obj.size() + strlen(new_str) + 1;
+		tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
+		
+		strcpy(tmp_obj.string.str.m_ptr, this->string.str.m_ptr);
+		
+		strcat(tmp_obj.string.str.m_ptr, new_str);
+	}
+
+	return tmp_obj;	
+}
+
 
 #endif // Str_impl.h

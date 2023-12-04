@@ -31,5 +31,15 @@ int main(){
  a1 = s + s1;	
  a1.print(); // Segmentation fault (core dumped) 
  
+ Str k;
 
+ k = s + "avvvvvvaaaa";
+
+ k.print();
+ 
+ Str k1;
+
+ k1 = s1 + "AAAAAAAAAAAAAAAAAAA";
+
+ k1.print();
 }
