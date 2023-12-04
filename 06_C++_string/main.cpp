@@ -42,4 +42,16 @@ int main(){
  k1 = s1 + "AAAAAAAAAAAAAAAAAAA";
 
  k1.print();
+
+ Str l1;
+	
+ l1 = "LLLLLLL" + s;
+
+ l1.print();
+
+ Str l2;
+	
+ l2 = "lllllllllllllll" + s1;
+ l2.print();
+
 }

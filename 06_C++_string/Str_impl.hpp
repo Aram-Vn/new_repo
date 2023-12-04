@@ -334,5 +334,31 @@ Str Str::operator+(const char* new_str)
 	return tmp_obj;	
 }
 
+Str operator+(const char* new_str, const Str& str)
+{
+	Str tmp_obj(str.c_str());
+	if(tmp_obj.m_Is_on_stack) {
+		if(strlen(new_str) + str.size() < STACK_SIZE){
+			strcpy(tmp_obj.string.on_stack, new_str);
+			strcat(tmp_obj.string.on_stack, str.string.on_stack);
+		} else {
+			tmp_obj.string.str.m_size = strlen(new_str) + str.size() + 1;
+			tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];
+			
+			strcpy(tmp_obj.string.str.m_ptr, new_str);
+			strcat(tmp_obj.string.str.m_ptr, str.string.on_stack);
+
+			tmp_obj.m_Is_on_stack = false;
+		}		
+	} else {
+		tmp_obj.string.str.m_size = tmp_obj.size() + strlen(new_str) + 1;
+		tmp_obj.string.str.m_ptr = new char[tmp_obj.size()];	
+
+		strcpy(tmp_obj.string.str.m_ptr, new_str);
+		strcat(tmp_obj.string.str.m_ptr, str.string.str.m_ptr);
+	}
+
+	return tmp_obj;
+}
 
 #endif // Str_impl.h

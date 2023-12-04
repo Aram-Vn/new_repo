@@ -22,6 +22,8 @@ public:
 	Str operator+(const Str& other);
 	Str operator+(const char* new_str);
 
+	friend Str operator+(const char* new_str, const Str& str);  
+
 	int size() const;
 	const char* c_str() const;
 
@@ -43,5 +45,6 @@ private:
     } string; 
 };
 
+Str operator+(const char* new_str, const Str& str);
 
 #endif // Str.h
