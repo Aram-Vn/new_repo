@@ -1,0 +1,10 @@
+gnore everything
+*
+
+# Except for these files and directories
+!*.cpp
+!*.h
+!*.hpp
+!README.md
+!TurnCppIntoExe
+!.gitignore
