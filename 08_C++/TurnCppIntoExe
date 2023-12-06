@@ -2,14 +2,14 @@
 
 # Function to check if a file ends with ".cpp"
 function endsWithCpp {
-    [[ "$1" == *.cpp ]]
+    [[ "$1" == *.hpp ]]
 }
 
 # Function to compile the C++ file using g++
 function compileWithGpp {
-    file="$1"
+    file="main"
     echo "Compiling $file with g++..."
-    g++ "$file" -o "${file%.cpp}.out"
+    g++ -Wall "$file" -o "${file%.cpp}.out"
 }
 
 # Monitor the current directory for file changes
