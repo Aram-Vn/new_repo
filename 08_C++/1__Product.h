@@ -6,11 +6,14 @@
 class Product
 {
 public:
-	
+	Product();
+	Product(std::string new_name, double new_price);
+	~Product();
+
+	void display();
 private:
-	std::string m_nume;
+	std::string m_name;
 	double m_price;
 };
-
 
 #endif //1__Product.h

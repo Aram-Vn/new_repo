@@ -2,13 +2,14 @@
 #define CART_H
 
 #include <iostream>
+#include <vector>
 
 class Cart 
 {
 public:
 
 private:
- 	std::vectore<Product*> m_products;
+ 	std::vector<Product*> m_products;
 };
 
 #endif //CART_H

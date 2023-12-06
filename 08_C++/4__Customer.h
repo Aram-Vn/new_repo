@@ -10,7 +10,7 @@ public:
 
 private:
 	std::string m_name;
-	Cart m_cart
+	Cart m_cart;
 };
 
 #endif //4__Customer.h
