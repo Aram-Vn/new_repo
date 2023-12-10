@@ -7,6 +7,10 @@
 class DiscountedProduct : public Product
 {
 public:
+	DiscountedProduct(std::string new_name, double new_price, double discount);
+	~DiscountedProduct();	
+
+public:
 	virtual void display() override;
 	virtual double calculate_discount(double discount) override;
 

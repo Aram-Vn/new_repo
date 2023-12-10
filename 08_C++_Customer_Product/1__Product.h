@@ -14,7 +14,7 @@ public:
     virtual void display();
     virtual double calculate_discount(double discount);
 
-private:
+protected:
     std::string m_name;
     double m_price;
 };
