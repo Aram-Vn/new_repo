@@ -6,12 +6,23 @@
 int main(){
 
 	Product p("TEST", 159.28);	
-	p.display();
-	std::cout << p.calculate_discount() << std::endl;
+	/* p.display(); */
+	/* std::cout << p.calculate_discount() << std::endl; */
 
-	std::cout << "\n*******\n" << std::endl;
+	/* std::cout << "\n*******\n" << std::endl; */
 
 	DiscountedProduct d("TEST2", 1234, 10);
-	d.display();
-	std::cout << d.calculate_discount() << std::endl;
+	/* d.display(); */
+	/* std::cout << d.calculate_discount() << std::endl; */
+
+	/* std::cout << "\n*******\n" << std::endl; */
+
+	Cart c = {&p, &d};
+
+	c.addProduct(&p);
+
+	std::cout << "PRISE "  <<c.calculateTotal() << std::endl;
+	
+	std::cout << "\n*******\n" << std::endl;
+	c.display();
 }

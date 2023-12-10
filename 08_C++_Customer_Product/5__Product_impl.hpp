@@ -24,7 +24,7 @@ void Product::display() const
 
 double Product::calculate_discount() const
 {
-	std::cout << "No discount for this product!!" << std::endl;
-	std::cout << "current prise is: ";
+	/* std::cout << "No discount for this product!!" << std::endl; */
+	/* std::cout << "current prise is: "; */
 	return m_price;
 }

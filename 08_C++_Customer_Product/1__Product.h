@@ -13,7 +13,7 @@ public:
 public:
     virtual void display() const;
     virtual double calculate_discount() const;
-
+	
 protected:
     std::string m_name;
     double m_price;
