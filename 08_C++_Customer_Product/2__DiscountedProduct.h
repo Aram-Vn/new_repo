@@ -11,8 +11,8 @@ public:
 	~DiscountedProduct();	
 
 public:
-	virtual void display() override;
-	virtual double calculate_discount(double discount) override;
+	virtual void display() const override;
+	virtual double calculate_discount() const override;
 
 private:
 	double m_discount_precentage;

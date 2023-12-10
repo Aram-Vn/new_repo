@@ -16,13 +16,15 @@ Product::~Product()
 	m_price = 0.0;
 }
 
-void Product::display()
+void Product::display() const
 {
 	std::cout<< "Product name: " << m_name << std::endl;
 	std::cout << "Product price: " << m_price << std::endl;
 }
 
-double Product::calculate_discount(double discount)
+double Product::calculate_discount() const
 {
-	return	m_price - (m_price * discount) / 100;	
+	std::cout << "No discount for this product!!" << std::endl;
+	std::cout << "current prise is: ";
+	return m_price;
 }

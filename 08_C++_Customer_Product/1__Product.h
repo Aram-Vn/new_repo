@@ -11,8 +11,8 @@ public:
     virtual ~Product();
 
 public:
-    virtual void display();
-    virtual double calculate_discount(double discount);
+    virtual void display() const;
+    virtual double calculate_discount() const;
 
 protected:
     std::string m_name;
