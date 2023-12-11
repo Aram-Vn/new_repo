@@ -16,13 +16,22 @@ int main(){
 	/* std::cout << d.calculate_discount() << std::endl; */
 
 	/* std::cout << "\n*******\n" << std::endl; */
+	Cart c;
 
-	Cart c = {&p, &d};
+	/* Cart c = {&p, &d}; */
 
-	c.addProduct(&p);
+	/* c.addProduct(&p); */
 
-	std::cout << "PRISE "  <<c.calculateTotal() << std::endl;
+	/* std::cout << "PRISE "  <<c.calculateTotal() << std::endl; */
 	
-	std::cout << "\n*******\n" << std::endl;
-	c.display();
+	/* std::cout << "\n*******\n" << std::endl; */
+	/* c.display(); */
+
+	Customer AA("AAA", c);
+	
+	AA.add_to_Cart(&p);
+	AA.add_to_Cart(&d);
+	
+	AA.view_Cart();
+
 }
