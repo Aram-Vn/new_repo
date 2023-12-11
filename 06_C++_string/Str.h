@@ -21,8 +21,10 @@ public:
 
 	Str operator+(const Str& other);
 	Str operator+(const char* new_str);
-
 	friend Str operator+(const char* new_str, const Str& str);  
+
+	char& operator[](int ind);
+	char operator[](int ind) const;
 
 	int size() const;
 	const char* c_str() const;
@@ -46,5 +48,7 @@ private:
 };
 
 Str operator+(const char* new_str, const Str& str);
+std::ostream& operator<<(std::ostream&, const Str&);
+td::istream& operator>>(std::istream& is, Str& str);
 
 #endif // Str.h

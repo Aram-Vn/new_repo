@@ -5,53 +5,53 @@
 int main(){
 
  Str s("aa  aaa a");
- s.print();
+ std::cout << s << std::endl; 
 
  Str s1("qwerertyutqwertqwertwertertyer we rty");
- s1.print();
+ std::cout << s1 << std::endl; 
 
- Str f1 = s;
- f1.print();   // works!!!!!  
+ /* Str f1 = s; */
+ /* f1.print();   // works!!!!! */  
 
- Str f2 = s1;
- f2.print();  // nothig 
+ /* Str f2 = s1; */
+ /* f2.print();  // nothig */ 
 
  
- std::cout << "\n*******" << std::endl;
+ /* std::cout << "\n*******" << std::endl; */
 
- Str a;
+ /* Str a; */
 
- a = s1 + s;	
- a.print();  // works!!!!!
+ /* a = s1 + s; */	
+ /* a.print();  // works!!!!! */
  
- std::cout << "\n*******" << std::endl;
+ /* std::cout << "\n*******" << std::endl; */
  
- Str a1;
+ /* Str a1; */
 
- a1 = s + s1;	
- a1.print(); // Segmentation fault (core dumped) 
+ /* a1 = s + s1; */	
+ /* a1.print(); // Segmentation fault (core dumped) */ 
  
- Str k;
+ /* Str k; */
 
- k = s + "avvvvvvaaaa";
+ /* k = s + "avvvvvvaaaa"; */
 
- k.print();
+ /* k.print(); */
  
- Str k1;
+ /* Str k1; */
 
- k1 = s1 + "AAAAAAAAAAAAAAAAAAA";
+ /* k1 = s1 + "AAAAAAAAAAAAAAAAAAA"; */
 
- k1.print();
+ /* k1.print(); */
 
- Str l1;
+ /* Str l1; */
 	
- l1 = "LLLLLLL" + s;
+ /* l1 = "LLLLLLL" + s; */
 
- l1.print();
+ /* l1.print(); */
 
- Str l2;
+ /* Str l2; */
 	
- l2 = "lllllllllllllll" + s1;
- l2.print();
+ /* l2 = "lllllllllllllll" + s1; */
+ /* l2.print(); */
 
 }

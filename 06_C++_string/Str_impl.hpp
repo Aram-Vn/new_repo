@@ -361,4 +361,68 @@ Str operator+(const char* new_str, const Str& str)
 	return tmp_obj;
 }
 
+char& Str::operator[](int ind) 
+{
+	if(!m_Is_on_stack){
+		if(this->string.str.m_ptr == nullptr){
+			std::cout << "NULLPTR" << std::endl;
+			exit(0);
+		}
+	
+		if(ind >= 0 && ind < this->string.str.m_size){
+			return *(this->string.str.m_ptr + ind);
+		} else {
+			std::cout << "ind must be >=0 && < size" << std::endl;
+			exit(0);
+		}
+	} else {
+		if(ind >= 0 && ind < strlen(this->string.on_stack)){
+			return string.on_stack[ind];
+		} else {
+			std::cout << "ind must be >=0 && < size" << std::endl;
+			exit(0);
+		}
+	}
+}
+
+char Str::operator[](int ind) const
+{
+	if(!m_Is_on_stack){
+		if(this->string.str.m_ptr == nullptr){
+			std::cout << "NULLPTR" << std::endl;
+			exit(0);
+		}
+	
+		if(ind >= 0 && ind < this->string.str.m_size){
+			return *(this->string.str.m_ptr + ind);
+		} else {
+			std::cout << "ind must be >=0 && < size" << std::endl;
+			exit(0);
+		}
+	} else {
+		if(ind >= 0 && ind < strlen(this->string.on_stack)){
+			return string.on_stack[ind];
+		} else {
+			std::cout << "ind must be >=0 && < size" << std::endl;
+			exit(0);
+		}
+	}
+}
+
+std::ostream& operator<<(std::ostream& os, const Str& obj)
+{
+	for(int i = 0; i < obj.size(); ++i){
+		os << obj[i];
+	}
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, Str& str)
+{
+	for(int i = 0; i < obj.size(); ++i){
+		is >> str[i];
+	}
+	return is;
+}
+
 #endif // Str_impl.h
