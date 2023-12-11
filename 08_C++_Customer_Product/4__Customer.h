@@ -7,6 +7,11 @@
 class Customer 
 {
 public:
+	Customer(const char* new_name, Cart new_cart);
+
+public:
+	void add_to_Cart(Product* product);
+	void view_Cart();
 
 private:
 	std::string m_name;
