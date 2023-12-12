@@ -3,7 +3,7 @@
 
 #include "1__Shape.h"
 
-class Circle
+class Circle : public Shape
 {
 public:
 	~Circle() = default;
@@ -11,8 +11,8 @@ public:
 	Circle(int new_radius);
 public:
 	virtual void drawing_the_shape() const override;
-//	virtual void calculat_area() override;
-//	virtual void displayInfo() override;	
+	virtual double calculat_area() override;
+	virtual void displayInfo() override;	
 private:
 	int m_radius;
 };
