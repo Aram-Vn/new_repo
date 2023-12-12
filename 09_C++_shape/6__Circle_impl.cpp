@@ -21,11 +21,9 @@ double Circle::calculat_area() {
 }
 
 void Circle::displayInfo() {
-	std::cout << "its a: "; 
+    std::cout << "its a: "; 
 	drawing_the_shape();
 	std::cout << std::endl;
 
-	std::cout << "area is: ";
-	calculat_area(); 
-	std::cout << std::endl;
+	std::cout << "area is: " << calculat_area() << std::endl;
 }
