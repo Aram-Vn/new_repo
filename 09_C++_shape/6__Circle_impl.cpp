@@ -2,7 +2,7 @@
 #include "2__Circle.h"
 
 
-//constexpr double PI = 3.14159265358979323846;
+constexpr double PI = 3.14159265358979323846;
 
 Circle::Circle(int new_radius) :
 	m_radius(new_radius)
@@ -17,7 +17,7 @@ void Circle::drawing_the_shape() const {
 }
 
 double Circle::calculat_area() {
-	return 3.14159265358979323846 * m_radius * m_radius;
+	return PI * m_radius * m_radius;
 }
 
 void Circle::displayInfo() {

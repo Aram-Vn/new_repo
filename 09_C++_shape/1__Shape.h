@@ -12,6 +12,6 @@ public:
 	virtual void displayInfo() = 0;	
 };
 
-Shape::~Shape() {}
+
 
 #endif //SHAPE_H
