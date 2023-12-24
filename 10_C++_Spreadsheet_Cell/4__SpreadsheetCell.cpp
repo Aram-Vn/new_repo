@@ -5,7 +5,7 @@
 SpreadsheetCell::SpreadsheetCell() : m_cell("") {}
 
 SpreadsheetCell::SpreadsheetCell(const std::string& new_str) :
-    m_cell("const std::string& new_str")
+    m_cell(new_str)
 {}
 
 SpreadsheetCell::SpreadsheetCell(const int new_val)
@@ -84,7 +84,7 @@ SpreadsheetCell& SpreadsheetCell::operator++ ()
     std::stringstream ss(m_cell);
     ss >> i_num;
  
-    if(!(ss.fail()))
+    if(!ss.fail())
     {
         ++i_num;
         m_cell = std::to_string(i_num);
@@ -95,7 +95,7 @@ SpreadsheetCell& SpreadsheetCell::operator++ ()
 
     ss >> d_num;
  
-    if(ss.fail())
+    if(!ss.fail())
     {
         d_num++;
         m_cell = std::to_string(d_num);
@@ -115,7 +115,7 @@ SpreadsheetCell SpreadsheetCell::operator++ (int)
     std::stringstream ss(m_cell);
     ss >> i_num;
  
-    if(!(ss.fail()))
+    if(!ss.fail())
     {
         ++i_num;
         m_cell = std::to_string(i_num);
@@ -139,26 +139,25 @@ SpreadsheetCell SpreadsheetCell::operator++ (int)
 
 SpreadsheetCell& SpreadsheetCell::operator-- ()
 {
-    int i_num;
-
     std::stringstream ss(m_cell);
-    ss >> i_num;
- 
-    if(!(ss.fail()))
-    {
-        --i_num;
-        m_cell = std::to_string(i_num);
-        return *this;
-    }
-
+    
     double d_num;
-
     ss >> d_num;
  
-    if(ss.fail())
+    if(!ss.fail())
     {
         --d_num;
         m_cell = std::to_string(d_num);
+        return *this;
+    }
+
+    int i_num;
+    ss >> i_num;
+ 
+    if(!ss.fail())
+    {
+        --i_num;
+        m_cell = std::to_string(i_num);
         return *this;
     }
 
@@ -170,30 +169,39 @@ SpreadsheetCell SpreadsheetCell::operator-- (int)
 {
     SpreadsheetCell tmp = *this;
 
-    int i_num;
-
     std::stringstream ss(m_cell);
-    ss >> i_num;
- 
-    if(!(ss.fail()))
-    {
-        --i_num;
-        m_cell = std::to_string(i_num);
-        return tmp;
-    }
 
     double d_num;
-
     ss >> d_num;
  
-    if(ss.fail())
+    if(!ss.fail())
     {
         --d_num;
         m_cell = std::to_string(d_num);
         return tmp;
     }
 
+
+    int i_num;
+    ss >> i_num;
+ 
+    if(!ss.fail())
+    {
+        --i_num;
+        m_cell = std::to_string(i_num);
+        return tmp;
+    }
+
+
     std::cout << "SpreadsheetCell\ncan't ++" << std::endl; 
     return *this;
 }
 
+std::ostream& operator<<(std::ostream& os, const SpreadsheetCell&obj)
+{
+    std::string val = obj.getStringValue();
+
+    os << val << std::endl;
+
+    return os;
+}

@@ -34,4 +34,6 @@ private:
     std::string m_cell;
 };
 
+std::ostream& operator<<(std::ostream& os, const SpreadsheetCell& obj);
+
 #endif //SPREADSHEETCELL_H

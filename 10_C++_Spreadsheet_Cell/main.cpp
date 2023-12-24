@@ -5,4 +5,12 @@
 
 int main() {
 
+    SpreadsheetCell obj("55");
+
+    --obj;
+    obj--;
+
+
+    std::cout << obj;
+
 }
