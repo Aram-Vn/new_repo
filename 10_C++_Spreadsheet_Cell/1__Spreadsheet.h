@@ -16,8 +16,8 @@ public:
     Spreadsheet& operator= (Spreadsheet&& other) noexcept;
 
     Spreadsheet operator+ (const Spreadsheet& other);
-    Spreadsheet& operator[] (int row);
-    Spreadsheet& operator[] (const SpreadsheetCell& obj);
+    Spreadsheet* operator[] (int row); // ??
+    Spreadsheet& operator[] (const SpreadsheetCell& obj); // ??
     
 public:
     void addRow(int row_amount);
@@ -33,10 +33,10 @@ private:
 
 private:
     int m_row_cap;
-    int m_cell_cap;
+    int m_col_cap;
     int m_row;
     int m_col;
-    std::vector<std::vector<SpreadsheetCell>> m_arr;
+    SpreadsheetCell** m_arr;
 };
 
 std::ostream& operator<<(std::ostream& os, const Spreadsheet& obj);

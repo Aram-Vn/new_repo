@@ -1,4 +1,5 @@
 #include "3__SpreadsheetCell.h"
+#include <algorithm>
 #include <sstream>
 #include <string>
 
@@ -73,14 +74,28 @@ SpreadsheetCell::operator double()
     } catch (std::exception& err) {
         std::cout << "for" << m_cell << std::endl;
         std::cout << err.what() << std::endl;
+        exit(0);
     }
 
 }
 
-SpreadsheetCell& SpreadsheetCell::operator++ ()
-{
-    int i_num;
+SpreadsheetCell& SpreadsheetCell::operator++() {
 
+    if(m_cell.find('.') != std::string::npos)
+    {
+        double d_num;
+        std::stringstream ss(m_cell);
+        ss >> d_num;
+ 
+        if(!ss.fail())
+        {
+            ++d_num;
+            m_cell = std::to_string(d_num);
+            return *this;
+        }
+    }
+
+    int i_num;
     std::stringstream ss(m_cell);
     ss >> i_num;
  
@@ -88,17 +103,6 @@ SpreadsheetCell& SpreadsheetCell::operator++ ()
     {
         ++i_num;
         m_cell = std::to_string(i_num);
-        return *this;
-    }
-
-    double d_num;
-
-    ss >> d_num;
- 
-    if(!ss.fail())
-    {
-        d_num++;
-        m_cell = std::to_string(d_num);
         return *this;
     }
 
