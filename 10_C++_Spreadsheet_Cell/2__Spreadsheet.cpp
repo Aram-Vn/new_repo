@@ -13,10 +13,11 @@ Spreadsheet::Spreadsheet() :
 {}
 
 Spreadsheet::Spreadsheet(int new_row, int new_col) :
-    m_row_cap(new_row),
-    m_col_cap(new_col),
-    m_row(m_row_cap),
-    m_col(m_col_cap)
+    m_row(new_row),
+    m_col(new_col),
+    m_row_cap(2 * m_row),
+    m_col_cap(2 * m_col),
+    m_arr(nullptr)
 {
     m_arr = new SpreadsheetCell* [m_row_cap];
 

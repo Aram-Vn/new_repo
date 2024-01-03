@@ -5,9 +5,9 @@
 
 int main() {
 
-    SpreadsheetCell obj("5.55");
+    SpreadsheetCell obj("555");
 
-    ++obj;
+    obj--;
 
     std::cout << obj;
 

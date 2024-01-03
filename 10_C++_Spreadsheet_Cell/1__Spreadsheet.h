@@ -29,13 +29,13 @@ public:
     void print();
 
 private:
-    void allocator(int ammount = 0);
+    void realoc(int ammount = 0);
 
 private:
-    int m_row_cap;
-    int m_col_cap;
     int m_row;
     int m_col;
+    int m_row_cap;
+    int m_col_cap;
     SpreadsheetCell** m_arr;
 };
 
