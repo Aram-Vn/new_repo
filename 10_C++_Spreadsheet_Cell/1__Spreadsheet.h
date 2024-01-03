@@ -8,16 +8,17 @@
 class Spreadsheet
 {
 public:
-    Spreadsheet();
-    ~ Spreadsheet();
-    Spreadsheet(int new_row, int new_col);
+    Spreadsheet(); //
+    ~ Spreadsheet(); //
+    Spreadsheet(int new_row, int new_col); // 
 
-    Spreadsheet& operator= (const Spreadsheet& other);
+    Spreadsheet& operator= (const Spreadsheet& other); //
     Spreadsheet& operator= (Spreadsheet&& other) noexcept;
 
     Spreadsheet operator+ (const Spreadsheet& other);
-    Spreadsheet* operator[] (int row); // ??
-    Spreadsheet& operator[] (const SpreadsheetCell& obj); // ??
+    std::string operator[] (int row); 
+    std::string operator() (int row, int col);
+    // Spreadsheet& operator[] (const SpreadsheetCell& obj); // ??
     
 public:
     void addRow(int row_amount);

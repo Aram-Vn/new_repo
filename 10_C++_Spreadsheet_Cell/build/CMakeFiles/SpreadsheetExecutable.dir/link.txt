@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o -o SpreadsheetExecutable 

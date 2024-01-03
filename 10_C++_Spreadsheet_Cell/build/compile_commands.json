@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++11 -o CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp",
+  "file": "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp",
+  "output": "CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o"
+},
+{
+  "directory": "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++11 -o CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp",
+  "file": "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp",
+  "output": "CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o"
+},
+{
+  "directory": "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build",
+  "command": "/usr/bin/clang++   -g -std=gnu++11 -o CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp",
+  "file": "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp",
+  "output": "CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o"
+}
+]

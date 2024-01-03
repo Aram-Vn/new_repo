@@ -5,10 +5,10 @@
 
 int main() {
 
-    SpreadsheetCell obj("555");
+    Spreadsheet s(5, 5);
 
-    obj--;
+    s[1][5] = 5;
 
-    std::cout << obj;
+    std::cout << s[1][5] << std::endl;
 
 }
