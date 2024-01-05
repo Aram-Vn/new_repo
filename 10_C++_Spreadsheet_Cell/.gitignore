@@ -3,3 +3,4 @@ build/
 compile_commands.json
 SpreadsheetCell/src/*.out 
 .cache/clangd/index
+.vscode
