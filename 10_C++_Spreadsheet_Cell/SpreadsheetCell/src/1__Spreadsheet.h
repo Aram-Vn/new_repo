@@ -13,15 +13,18 @@ public:
     Spreadsheet(int new_row, int new_col); // 
 
     Spreadsheet& operator= (const Spreadsheet& other); //
-    Spreadsheet& operator= (Spreadsheet&& other) noexcept;
+    Spreadsheet& operator= (Spreadsheet&& other) noexcept; //
 
     Spreadsheet operator+ (const Spreadsheet& other);
-    std::string operator[] (int row); 
-    std::string operator() (int row, int col);
+    SpreadsheetCell* operator[] (int row) const ; //
+    std::string operator() (int row, int col) const ;   //
     // Spreadsheet& operator[] (const SpreadsheetCell& obj); // ??
     
+    int get_row() const;
+    int get_col() const;
+
 public:
-    void addRow(int row_amount);
+    void addRow(int row_amount); //
     void addColumn(int collimn_ammount);
     void removeRow(int row_ind);
     void removeColumn(int Column_ind);
@@ -30,7 +33,8 @@ public:
     void print();
 
 private:
-    void realoc(int ammount = 0);
+    void realoc_row(int ammount = 0); //
+    void realoc_col(int ammount = 0); //
 
 private:
     int m_row;

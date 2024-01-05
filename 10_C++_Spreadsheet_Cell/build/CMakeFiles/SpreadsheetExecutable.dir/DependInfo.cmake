@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp" "CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o" "gcc" "CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o.d"
-  "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp" "CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o" "gcc" "CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o.d"
-  "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp" "CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o" "gcc" "CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o.d"
+  "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/2__Spreadsheet.cpp" "CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o" "gcc" "CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o.d"
+  "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/4__SpreadsheetCell.cpp" "CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o" "gcc" "CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o.d"
+  "/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/main.cpp" "CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o" "gcc" "CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

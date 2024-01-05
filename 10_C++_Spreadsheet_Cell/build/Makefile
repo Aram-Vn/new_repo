@@ -117,89 +117,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named SpreadsheetExecutable
+# Target rules for targets named spreadsheet_app
 
 # Build rule for target.
-SpreadsheetExecutable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SpreadsheetExecutable
-.PHONY : SpreadsheetExecutable
+spreadsheet_app: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spreadsheet_app
+.PHONY : spreadsheet_app
 
 # fast build rule for target.
-SpreadsheetExecutable/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/build
-.PHONY : SpreadsheetExecutable/fast
+spreadsheet_app/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/build
+.PHONY : spreadsheet_app/fast
 
-2__Spreadsheet.o: 2__Spreadsheet.cpp.o
-.PHONY : 2__Spreadsheet.o
-
-# target to build an object file
-2__Spreadsheet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o
-.PHONY : 2__Spreadsheet.cpp.o
-
-2__Spreadsheet.i: 2__Spreadsheet.cpp.i
-.PHONY : 2__Spreadsheet.i
-
-# target to preprocess a source file
-2__Spreadsheet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.i
-.PHONY : 2__Spreadsheet.cpp.i
-
-2__Spreadsheet.s: 2__Spreadsheet.cpp.s
-.PHONY : 2__Spreadsheet.s
-
-# target to generate assembly for a file
-2__Spreadsheet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.s
-.PHONY : 2__Spreadsheet.cpp.s
-
-4__SpreadsheetCell.o: 4__SpreadsheetCell.cpp.o
-.PHONY : 4__SpreadsheetCell.o
+SpreadsheetCell/src/2__Spreadsheet.o: SpreadsheetCell/src/2__Spreadsheet.cpp.o
+.PHONY : SpreadsheetCell/src/2__Spreadsheet.o
 
 # target to build an object file
-4__SpreadsheetCell.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o
-.PHONY : 4__SpreadsheetCell.cpp.o
+SpreadsheetCell/src/2__Spreadsheet.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o
+.PHONY : SpreadsheetCell/src/2__Spreadsheet.cpp.o
 
-4__SpreadsheetCell.i: 4__SpreadsheetCell.cpp.i
-.PHONY : 4__SpreadsheetCell.i
+SpreadsheetCell/src/2__Spreadsheet.i: SpreadsheetCell/src/2__Spreadsheet.cpp.i
+.PHONY : SpreadsheetCell/src/2__Spreadsheet.i
 
 # target to preprocess a source file
-4__SpreadsheetCell.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.i
-.PHONY : 4__SpreadsheetCell.cpp.i
+SpreadsheetCell/src/2__Spreadsheet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.i
+.PHONY : SpreadsheetCell/src/2__Spreadsheet.cpp.i
 
-4__SpreadsheetCell.s: 4__SpreadsheetCell.cpp.s
-.PHONY : 4__SpreadsheetCell.s
+SpreadsheetCell/src/2__Spreadsheet.s: SpreadsheetCell/src/2__Spreadsheet.cpp.s
+.PHONY : SpreadsheetCell/src/2__Spreadsheet.s
 
 # target to generate assembly for a file
-4__SpreadsheetCell.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.s
-.PHONY : 4__SpreadsheetCell.cpp.s
+SpreadsheetCell/src/2__Spreadsheet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.s
+.PHONY : SpreadsheetCell/src/2__Spreadsheet.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+SpreadsheetCell/src/4__SpreadsheetCell.o: SpreadsheetCell/src/4__SpreadsheetCell.cpp.o
+.PHONY : SpreadsheetCell/src/4__SpreadsheetCell.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o
-.PHONY : main.cpp.o
+SpreadsheetCell/src/4__SpreadsheetCell.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o
+.PHONY : SpreadsheetCell/src/4__SpreadsheetCell.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+SpreadsheetCell/src/4__SpreadsheetCell.i: SpreadsheetCell/src/4__SpreadsheetCell.cpp.i
+.PHONY : SpreadsheetCell/src/4__SpreadsheetCell.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/main.cpp.i
-.PHONY : main.cpp.i
+SpreadsheetCell/src/4__SpreadsheetCell.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.i
+.PHONY : SpreadsheetCell/src/4__SpreadsheetCell.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+SpreadsheetCell/src/4__SpreadsheetCell.s: SpreadsheetCell/src/4__SpreadsheetCell.cpp.s
+.PHONY : SpreadsheetCell/src/4__SpreadsheetCell.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/main.cpp.s
-.PHONY : main.cpp.s
+SpreadsheetCell/src/4__SpreadsheetCell.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.s
+.PHONY : SpreadsheetCell/src/4__SpreadsheetCell.cpp.s
+
+SpreadsheetCell/src/main.o: SpreadsheetCell/src/main.cpp.o
+.PHONY : SpreadsheetCell/src/main.o
+
+# target to build an object file
+SpreadsheetCell/src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/main.cpp.o
+.PHONY : SpreadsheetCell/src/main.cpp.o
+
+SpreadsheetCell/src/main.i: SpreadsheetCell/src/main.cpp.i
+.PHONY : SpreadsheetCell/src/main.i
+
+# target to preprocess a source file
+SpreadsheetCell/src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/main.cpp.i
+.PHONY : SpreadsheetCell/src/main.cpp.i
+
+SpreadsheetCell/src/main.s: SpreadsheetCell/src/main.cpp.s
+.PHONY : SpreadsheetCell/src/main.s
+
+# target to generate assembly for a file
+SpreadsheetCell/src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/SpreadsheetCell/src/main.cpp.s
+.PHONY : SpreadsheetCell/src/main.cpp.s
 
 # Help Target
 help:
@@ -209,16 +209,16 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... SpreadsheetExecutable"
-	@echo "... 2__Spreadsheet.o"
-	@echo "... 2__Spreadsheet.i"
-	@echo "... 2__Spreadsheet.s"
-	@echo "... 4__SpreadsheetCell.o"
-	@echo "... 4__SpreadsheetCell.i"
-	@echo "... 4__SpreadsheetCell.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... spreadsheet_app"
+	@echo "... SpreadsheetCell/src/2__Spreadsheet.o"
+	@echo "... SpreadsheetCell/src/2__Spreadsheet.i"
+	@echo "... SpreadsheetCell/src/2__Spreadsheet.s"
+	@echo "... SpreadsheetCell/src/4__SpreadsheetCell.o"
+	@echo "... SpreadsheetCell/src/4__SpreadsheetCell.i"
+	@echo "... SpreadsheetCell/src/4__SpreadsheetCell.s"
+	@echo "... SpreadsheetCell/src/main.o"
+	@echo "... SpreadsheetCell/src/main.i"
+	@echo "... SpreadsheetCell/src/main.s"
 .PHONY : help
 
 

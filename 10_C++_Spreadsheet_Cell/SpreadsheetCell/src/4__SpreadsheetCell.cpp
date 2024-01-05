@@ -214,7 +214,7 @@ std::ostream& operator<<(std::ostream& os, const SpreadsheetCell& obj)
 {
     std::string val = obj.getStringValue();
 
-    os << val << std::endl;
+    os << val;
 
     return os;
 }

@@ -69,60 +69,60 @@ include CMakeFiles/SpreadsheetExecutable.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/SpreadsheetExecutable.dir/flags.make
 
-CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/flags.make
-CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o: /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp
-CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o -MF CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o.d -o CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/flags.make
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o: /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/2__Spreadsheet.cpp
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o -MF CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o.d -o CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/2__Spreadsheet.cpp
 
-CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp > CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.i
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/2__Spreadsheet.cpp > CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.i
 
-CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/2__Spreadsheet.cpp -o CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.s
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/2__Spreadsheet.cpp -o CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.s
 
-CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/flags.make
-CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o: /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp
-CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o -MF CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o.d -o CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/flags.make
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o: /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/4__SpreadsheetCell.cpp
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o -MF CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o.d -o CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/4__SpreadsheetCell.cpp
 
-CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp > CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.i
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/4__SpreadsheetCell.cpp > CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.i
 
-CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/4__SpreadsheetCell.cpp -o CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.s
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/4__SpreadsheetCell.cpp -o CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.s
 
-CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/flags.make
-CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o: /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp
-CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o -MF CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o.d -o CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/flags.make
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o: /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/main.cpp
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o: CMakeFiles/SpreadsheetExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o -MF CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o.d -o CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o -c /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/main.cpp
 
-CMakeFiles/SpreadsheetExecutable.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpreadsheetExecutable.dir/main.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp > CMakeFiles/SpreadsheetExecutable.dir/main.cpp.i
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/main.cpp > CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.i
 
-CMakeFiles/SpreadsheetExecutable.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpreadsheetExecutable.dir/main.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/main.cpp -o CMakeFiles/SpreadsheetExecutable.dir/main.cpp.s
+CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/SpreadsheetCell/src/main.cpp -o CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.s
 
 # Object files for target SpreadsheetExecutable
 SpreadsheetExecutable_OBJECTS = \
-"CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o" \
-"CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o" \
-"CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o"
+"CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o" \
+"CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o" \
+"CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o"
 
 # External object files for target SpreadsheetExecutable
 SpreadsheetExecutable_EXTERNAL_OBJECTS =
 
-SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/2__Spreadsheet.cpp.o
-SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/4__SpreadsheetCell.cpp.o
-SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/main.cpp.o
+SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/2__Spreadsheet.cpp.o
+SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/4__SpreadsheetCell.cpp.o
+SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/SpreadsheetCell/src/main.cpp.o
 SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/build.make
 SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable SpreadsheetExecutable"

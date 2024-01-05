@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/SpreadsheetExecutable.dir/all
+all: CMakeFiles/spreadsheet_app.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/SpreadsheetExecutable.dir/clean
+clean: CMakeFiles/spreadsheet_app.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/SpreadsheetExecutable.dir
+# Target rules for target CMakeFiles/spreadsheet_app.dir
 
 # All Build rule for target.
-CMakeFiles/SpreadsheetExecutable.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=1,2,3,4 "Built target SpreadsheetExecutable"
-.PHONY : CMakeFiles/SpreadsheetExecutable.dir/all
+CMakeFiles/spreadsheet_app.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles --progress-num=1,2,3,4 "Built target spreadsheet_app"
+.PHONY : CMakeFiles/spreadsheet_app.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/SpreadsheetExecutable.dir/rule: cmake_check_build_system
+CMakeFiles/spreadsheet_app.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SpreadsheetExecutable.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/spreadsheet_app.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/aram/dev/new_repo/10_C++_Spreadsheet_Cell/build/CMakeFiles 0
-.PHONY : CMakeFiles/SpreadsheetExecutable.dir/rule
+.PHONY : CMakeFiles/spreadsheet_app.dir/rule
 
 # Convenience name for target.
-SpreadsheetExecutable: CMakeFiles/SpreadsheetExecutable.dir/rule
-.PHONY : SpreadsheetExecutable
+spreadsheet_app: CMakeFiles/spreadsheet_app.dir/rule
+.PHONY : spreadsheet_app
 
 # clean rule for target.
-CMakeFiles/SpreadsheetExecutable.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SpreadsheetExecutable.dir/build.make CMakeFiles/SpreadsheetExecutable.dir/clean
-.PHONY : CMakeFiles/SpreadsheetExecutable.dir/clean
+CMakeFiles/spreadsheet_app.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/spreadsheet_app.dir/build.make CMakeFiles/spreadsheet_app.dir/clean
+.PHONY : CMakeFiles/spreadsheet_app.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
