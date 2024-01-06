@@ -113,6 +113,28 @@ std::string Spreadsheet::operator()(int row, int col) const
     return m_arr[row][col].getStringValue();
 }
 
+//------------------------_geters_---------------------------------//
+int Spreadsheet::get_row() const
+{
+    return m_row;
+}
+
+int Spreadsheet::get_col() const
+{
+    return m_col;
+}
+
+const SpreadsheetCell& Spreadsheet::getCell(int row, int col) const
+{
+    return m_arr[row][col];
+}
+
+//----------------------------_setters_----------------------------------//
+void Spreadsheet::setCell(int row, int col, const char* str)
+{
+    m_arr[row][col].setStringValue(str);
+}
+
 //------------------------_addRow_---------------------------------------//
 void Spreadsheet::addRow(int row_amount)
 {
@@ -125,6 +147,13 @@ void Spreadsheet::addRow(int row_amount)
         else
         {
             realoc_row();
+        }
+    }
+
+    for (int i = m_row; i < m_row + row_amount; ++i)
+    {
+        for (int j = 0; j < m_col; ++j) {
+            m_arr[i][j].setStringValue("");
         }
     }
 
@@ -146,7 +175,54 @@ void Spreadsheet::addColumn(int collimn_ammount)
         }
     }
 
+    for (int i = 0; i < m_row; ++i)
+    {
+        for (int j = m_col; j < m_col + collimn_ammount; ++j)
+        {
+            m_arr[i][j].setStringValue("");
+        }
+    }
+
     m_col += collimn_ammount;
+}
+
+//---------------------------_removeRow_-------------------------------//
+void Spreadsheet::removeRow(int row_amount)
+{
+    if (m_row < row_amount)
+    {
+        std::cout << "for removeRow\ncan't remowe\nrow_amount > m_row" << std::endl;
+        return;
+    }
+
+    m_row -= row_amount;
+}
+
+//---------------------------_removeColumn_-----------------------------//
+void Spreadsheet::removeColumn(int collumn_ammount)
+{
+    if (m_col < collumn_ammount)
+    {
+        std::cout << "for removeColumn\ncan't remowe\n collumn_ammount > m_col" << std::endl;
+        return;
+    }
+
+    m_col -= collumn_ammount;
+}
+
+//---------------------------_Output_operator_-------------------------//
+std::ostream& operator<<(std::ostream& os, const Spreadsheet& obj)
+{
+    for (int i = 0; i < obj.get_row(); ++i)
+    {
+        for (int j = 0; j < obj.get_col(); ++j)
+        {
+            os << obj[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
+    return os;
 }
 
 // private helper functions for reallocating memory by doubling
@@ -218,33 +294,6 @@ void Spreadsheet::realoc_col(int ammount)
     delete[] m_arr;
 
     m_arr = tmp_arr;
-}
-
-//------------------------_geters_---------------------------------//
-int Spreadsheet::get_row() const
-{
-    return m_row;
-}
-
-int Spreadsheet::get_col() const
-{
-    return m_col;
-}
-
-//---------------------------_Output_operator_-------------------------//
-std::ostream& operator<<(std::ostream& os, const Spreadsheet& obj)
-{
-    for (int i = 0; i < obj.get_row(); ++i)
-    {
-        for (int j = 0; j < obj.get_col(); ++j)
-        {
-            os << obj[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }
-    std::cout << std::endl;
-
-    return os;
 }
 
 /*

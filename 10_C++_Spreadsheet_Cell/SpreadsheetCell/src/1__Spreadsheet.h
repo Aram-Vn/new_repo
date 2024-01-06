@@ -18,18 +18,18 @@ public:
     Spreadsheet operator+ (const Spreadsheet& other);
     SpreadsheetCell* operator[] (int row) const ; //
     std::string operator() (int row, int col) const ;   //
-    // Spreadsheet& operator[] (const SpreadsheetCell& obj); // ??
     
-    int get_row() const;
-    int get_col() const;
 
 public:
+    int get_row() const; //
+    int get_col() const; //
+    const SpreadsheetCell& getCell(int row, int col) const;//
+    void setCell (int row, int col, const char* str); //
+    
     void addRow(int row_amount); //
-    void addColumn(int collimn_ammount);
-    void removeRow(int row_ind);
-    void removeColumn(int Column_ind);
-    const SpreadsheetCell& getCell(int row, int col);
-    void setCell (int row, int col, std::string str);
+    void addColumn(int collumn_ammount); //
+    void removeRow(int row_ind); //
+    void removeColumn(int Column_ind); //
     void print();
 
 private:
